@@ -1,0 +1,24 @@
+#include <iostream>
+//this code prints a num backwards
+
+using namespace std;
+
+int main() {
+int x;
+int a;
+int y;
+string b;
+cout<<("Enter a number: ");
+cin>>(x);
+a=x;
+b="";
+//repeats the loop the number of digit times
+for(int i =1;i<=(to_string(x).length());i++)
+{
+    y=a % 10; //assigns the last digit
+    a=a / 10; //removes the last digit
+    b=b+to_string(y); //it concatenates b to the str
+}
+cout<<(b);
+
+}
