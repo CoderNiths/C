@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    bool fever;
+    bool cough;
+    bool tierdness;
+    bool sneez;
+    bool loss_of_smell;
+    bool loss_of_taste;
+    bool result;
+    string name;
+    cout<<"hello what is ur name?";
+    getline(cin, name);
+    cout<<name<<" do you have a fever in the last few days?";
+    cin>>fever;
+    cout<<name<<" do you cough in the last few days?";
+    cin>>cough;
+    cout<<name<<" did you sneez in the last few days?";
+    cin>>tierdness;
+    cout<<name<<" do u feel tierd in the last few days?";
+    cin>>tierdness;
+    cout<<name<<" do you lose your smell in the last few days?";
+    cin>>loss_of_smell;
+    cout<<name<<" do you lose your taste in the last few days?";
+    cin>>loss_of_taste;
+    result=(fever&&(cough||sneez)&&tierdness&&(loss_of_smell||loss_of_taste));
+    if (result==0)
+        cout<<"you can go to the exam room";
+    if (result==1)
+        cout<<"you can't go to the exam room";
+}
